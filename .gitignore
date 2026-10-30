@@ -1,0 +1,7 @@
+# local working files, not part of the site
+/dist/
+/serve/
+/fontwork/
+/*.png
+__pycache__/
+.DS_Store

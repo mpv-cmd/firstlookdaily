@@ -1,0 +1,15 @@
+{
+  "name": "First Look Daily",
+  "tagline": "GTA 6 in italiano · un video ogni sera",
+  "base_url": "https://mpv-cmd.github.io/firstlookdaily",
+  "domain": "",
+  "youtube": "https://www.youtube.com/@firstlookdaily",
+  "tiktok": "https://www.tiktok.com/@firstlookdaily",
+  "instagram": "https://www.instagram.com/firstlook_daily/",
+  "release": {
+    "date": "2026-11-19",
+    "platforms": "PS5 e Xbox Series X|S",
+    "price": "80 €",
+    "page": "uscita-prezzo-piattaforme"
+  }
+}
