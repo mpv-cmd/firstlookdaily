@@ -42,6 +42,12 @@ def e(s):
     return html.escape(str(s), quote=True)
 
 
+def handle(url):
+    """'https://www.tiktok.com/@name' or 'https://www.instagram.com/name/' -> '@name'."""
+    h = urlparse(url).path.strip("/").split("/")[0]
+    return h if h.startswith("@") else "@" + h
+
+
 def load():
     with open(os.path.join(ROOT, "content", "site.json"), encoding="utf-8") as f:
         site = json.load(f)
@@ -236,7 +242,7 @@ def build_description(site, v):
     if lines[-1]:
         lines.append("")
     lines += ["Ogni sera un video nuovo su GTA 6 in italiano: iscriviti!",
-              "TikTok @firstlookdaily · Instagram @firstlook_daily", "",
+              "TikTok %s · Instagram %s" % (handle(site["tiktok"]), handle(site["instagram"])), "",
               "Canale di fan, non affiliato a Rockstar Games.", "#GTA6 #GTA6ITA"]
     return "\n".join(lines) + "\n"
 
